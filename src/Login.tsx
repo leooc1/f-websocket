@@ -7,7 +7,7 @@ interface LoginProps {
 }
 
 export default function Login({ onLogin }: LoginProps) {
-  const API_URL = import.meta.env.API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
   const [username, setUsername] = useState("");
   const [roomId, setRoomId] = useState("");
   const [isCreatingRoom, setIsCreatingRoom] = useState(false);
@@ -15,7 +15,8 @@ export default function Login({ onLogin }: LoginProps) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const socketRef = io(`${API_URL}` , {
+
+  const socketRef = io(`${API_URL}`, {
     reconnection: true,
     reconnectionDelay: 1000,
     reconnectionDelayMax: 5000,
