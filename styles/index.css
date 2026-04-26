@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.login-neumorphism {
+  border-radius: 50px;
+  background: #a89ea9;
+  box-shadow:
+    20px 20px 60px #8f8690,
+    -20px -20px 60px #c1b6c2;
+  @apply min-h-48 p-10;
+}
+
+.input-neumorphism {
+  border-radius: 20px;
+  background: #d7d0d7;
+  box-shadow:
+  inset 5px 5px 10px #b7b1b7,
+  inset -5px -5px 10px #f7eff7;
+  @apply px-3 py-2 text-xl my-8;
+}
