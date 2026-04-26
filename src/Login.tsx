@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import type { UserSession } from "./App";
 
@@ -15,7 +15,7 @@ export default function Login({ onLogin }: LoginProps) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-
+  useEffect(() => {}, [API_URL]);
   const socketRef = io(`${API_URL}`, {
     reconnection: true,
     reconnectionDelay: 1000,

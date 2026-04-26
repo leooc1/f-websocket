@@ -23,6 +23,8 @@ export function Chat({ userSession, onLogout }: ChatProps) {
   const [isOpen, setIsOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {}, [API_URL]);
+
   // Auto-scroll para a última mensagem
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -101,7 +103,8 @@ export function Chat({ userSession, onLogout }: ChatProps) {
           className="border-4 border-mauve-700 rounded-xl p-2 bg-mauve-400 hover:bg-mauve-300 cursor-pointer transition-all duration-200 shadow-lg"
           title="Abrir chat"
         >
-          <svg className="w-8 h-8 fill-mauve-70050"
+          <svg
+            className="w-8 h-8 fill-mauve-70050"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
